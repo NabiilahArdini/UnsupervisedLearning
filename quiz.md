@@ -56,7 +56,7 @@ There are of course, other method of extracting the loading information using `d
   [ ] Moisture, Quakers, Clean.Cup    
   [ ] Acidity, Body, Balance     
 
-// TODO: Create story bridging for the next question
+In the principal component analysis the value of the PC produced is an eigen value obtained from the matrix covariance. The greater the eigen value produced, the greater the variance captured
 
 4. Which of the following is NOT TRUE about PCA?     
   [ ] Because PCA tries to 'summarize' the covariance between variables of our data, it requires that the input variables to be scaled so they have the same range of measurement    
@@ -96,7 +96,7 @@ Based on the elbow plot generated from the function above try to answer the foll
   - [ ] 6   
   - [ ] 7
   
-// TODO: Create story bridging for the next question
+K-means is a clustering algorithm based on distance. Cluster results are stated to be optimum if the distance between data in the same cluster is low and the distance between data from different clusters is high.
 
 6. Which of the following is NOT TRUE about K-Means?       
   - [ ] The centroid in the first iteration is placed randomly
@@ -106,11 +106,9 @@ Based on the elbow plot generated from the function above try to answer the foll
 
 ## 2.2 Building Cluster
 
-// TODO: Clue for building kmeans object and extracting the object$clust
+Once you are set in using the K of your choice from previous section, try to create a K-means cluster from our data and store it to `kmeans_model`. Use a `set.seed(100)` before building the model to guarantee a reproducible example. Create new variabel on coffee dataset named `cluster` and store the cluster number by extracting the `kmeans_model$clust`.
 
 ## 2.3 Clusters Profiling
-
-Once you are set in using the K of your choice from previous section, try to create a K-means cluster from our data. Use a `set.seed(100)` before building the model to guarantee a reproducible example.
 
 7. For a customer who enjoy coffee with `coffeID` 929, which of the following coffee beans may be characteristically similar enough to warrant a recommendation?     
   - [ ] 1060    
