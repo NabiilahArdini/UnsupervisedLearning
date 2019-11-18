@@ -33,35 +33,35 @@ When we are looking for information to retain in a dimentionality reduction exer
 Using our scaled dataset, we will try to generate the principal component from `coffee_scale`. Recall how we use `FactoMineR` library to perform PCA. Use `PCA()` function for our scaled dataset and store it under `pca_coffee` object. Now check the `summary()` of the model.
 
 1. Using the information from model summary, how many PCs will you use if you only tolerate no more than 20% of information loss?    
-  [ ] 5 PC (PC 1 through 5)    
-  [ ] 6 PC (PC 1 through 6)    
-  [ ] 1 PC (PC 1 only)    
+ - [ ] 5 PC (PC 1 through 5)    
+ - [ ] 6 PC (PC 1 through 6)    
+ - [ ] 1 PC (PC 1 only)    
   
 Other than dimension reduction, PCA is also a great tools for detecting outliers. To do that we can utilize a biplot to visualize a multidimesional dataset into a two dimensional plot. Now try to detect the outliers by passing in your `pca_coffee` in `plot.PCA()` function.  
 
 2. Based on the visualization using biplot, which coffeee id is considered as outlier?    
-  [ ] 1082, 1080, 1081    
-  [ ] 1082, 993, 998    
-  [ ] 1081, 308, 201    
-  [ ] 1080, 1082, 998    
+ - [ ] 1082, 1080, 1081    
+ - [ ] 1082, 993, 998    
+ - [ ] 1081, 308, 201    
+ - [ ] 1080, 1082, 998    
   
 The biplot, consist of two types of biplot, if you pass in `choix` parameter when using `plot.PCA()`, you can choose either `choix="var"` or `choix="ind"` to generate a specific type of biplot. The `var` type, will give you the variables loading information within a plot. This however, is not really efficient when we are analyzing a lot of features. Some of the loading visualization (arrows), can overlapped to one another and make it harder to see.
 
 There are of course, other method of extracting the loading information using `dimdesc()` function. Pass in our object into `dimdesc()` and try to answer the following question:
   
 3. PC 1 is the most collectible PC of all variables. mention the 3 most contributing variables on PC 1!
-  [ ] Aroma, Flavor, Aftertaste    
-  [ ] Sweetness, Clean.cup, Uniformity    
-  [ ] Balance, Flavor, Aftertaste    
-  [ ] Moisture, Quakers, Clean.Cup    
-  [ ] Acidity, Body, Balance     
+ - [ ] Aroma, Flavor, Aftertaste    
+ - [ ] Sweetness, Clean.cup, Uniformity    
+ - [ ] Balance, Flavor, Aftertaste    
+ - [ ] Moisture, Quakers, Clean.Cup    
+ - [ ] Acidity, Body, Balance     
 
 In the principal component analysis the value of the PC produced is an eigen value obtained from the matrix covariance. The greater the eigen value produced, the greater the variance captured
 
 4. Which of the following is NOT TRUE about PCA?     
-  [ ] Because PCA tries to 'summarize' the covariance between variables of our data, it requires that the input variables to be scaled so they have the same range of measurement    
-  [ ] A Principal Component with an eigenvalue of 0.6 is not more helpful than a Principal Component with an eigenvalue of 6.0 in terms of the variance it explains    
-  [ ] We cannot fully reconstruct the original data from a PCA even if we use all the eigenvectors and eigenvalues because PCA always result in some loss of variance / information due to its dimensionality reduction process    
+ - [ ] Because PCA tries to 'summarize' the covariance between variables of our data, it requires that the input variables to be scaled so they have the same range of measurement    
+ - [ ] A Principal Component with an eigenvalue of 0.6 is not more helpful than a Principal Component with an eigenvalue of 6.0 in terms of the variance it explains    
+- [ ] We cannot fully reconstruct the original data from a PCA even if we use all the eigenvectors and eigenvalues because PCA always result in some loss of variance / information due to its dimensionality reduction process    
   
 # 2. K-Means Clustering
 
