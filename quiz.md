@@ -118,8 +118,8 @@ Once you are set in using the K of your choice from previous section, try to cre
 Recall how we can perform a cluster profiling by using a combination of `group_by()` and `summarise_all()` grouped by our previously created cluster column. After you extract the characteristics for each cluster, try to answer the following question:
   
 8. Can you describe the charateristic coffee that  in the same cluster as coffeeid 218!
-  - [ ] highest mean of aroma, highest mean of sweetness, and lowest mean of acidity    
-  - [ ] highest mean of aroma, highest mean of Flavor, and lowest mean of Body    
-  - [ ] highest mean of aroma, highest mean of Flavor, and highest mean of Acidity           
-  - [ ] highest mean of aroma, lowest mean of Flavor, and lowest mean of Acidity    
+  - [ ] Highest mean of Aroma, highest mean of Sweetness, and lowest mean of Acidity    
+  - [ ] Highest mean of Aroma, highest mean of Flavor, and lowest mean of Body    
+  - [ ] Highest mean of Aroma, highest mean of Flavor, and highest mean of Acidity           
+  - [ ] Highest mean of Aroma, lowest mean of Flavor, and lowest mean of Acidity    
 
