@@ -11,9 +11,9 @@ This dataset consisted of 13 variables and 1082 rows and contain reviews of vari
 - `coffeId` : id of coffee    
 - `Aroma` : the smell of coffee after adding hot water (e.g.floral, spicy, fruity, winery, sweety, earthy or nutty etc.).    
 - `Flavor` : the taste characteristics (e.g. fruity, sour, bitter, rich or balanced etc.).    
-- `Aftertaste` : overall impression of the coffee remains in the month.    
+- `Aftertaste` : overall impression of the coffee remains in the mouth.    
 - `Acidity` : the sharpness and liveliness of the acidity (e.g. sharp, thin, flat, mild, or neutral etc.).    
-- `Body` : the tactile feeling of the coffee in the month (e.g. full, thick, balanced, buttery or thin etc.).    
+- `Body` : the tactile feeling of the coffee in the mouth (e.g. full, thick, balanced, buttery or thin etc.).    
 - `Balance` : no single flavor dominates the other.    
 - `Uniformity` : how similarly sized the ground coffee particles are.    
 - `Clean cup` : no flavor defects present.    
@@ -30,7 +30,7 @@ When we are looking for information to retain in a dimentionality reduction exer
 
 ## Build your Principal Component
 
-Using our scaled dataset, we will try to generate the principal component from `coffee_scale`. Recall how we use `FactoMineR` library to perform PCA. Use `PCA()` function for our scaled dataset and store it under `pca_coffee` object. Now check the `summary()` of the model.
+Using our scaled dataset, we will try to generate the principal component from `coffee_scale`. Recall how we use `FactoMineR` library to perform PCA. Use `PCA()` function for our scaled dataset and store it under `pca_coffee` object (dont forget to set scale.unit parameter to FALSE because we already scale the data). Now check the `summary()` of the model.
 
 1. Using the information from model summary, how many PCs will you use if you only tolerate no more than 20% of information loss?    
  - [ ] 5 PC (PC 1 through 5)    
@@ -56,7 +56,7 @@ There are of course, other method of extracting the loading information using `d
  - [ ] Moisture, Quakers, Clean.Cup    
  - [ ] Acidity, Body, Balance     
 
-In the principal component analysis the value of the PC produced is an eigen value obtained from the matrix covariance. The greater the eigen value produced, the greater the variance captured
+In the principal component analysis each PC produced has an eigen value obtained from the matrix covariance. The greater the eigen value produced, the greater the variance captured
 
 4. Which of the following is NOT TRUE about PCA?     
  - [ ] Because PCA tries to 'summarize' the covariance between variables of our data, it requires that the input variables to be scaled so they have the same range of measurement    
@@ -76,7 +76,7 @@ kmeansTunning <- function(data, maxK) {
   withinall <- NULL
   total_k <- NULL
   for (i in 2:maxK) {
-    set.seed(100)
+    set.seed(654)
     temp <- kmeans(data,i)$tot.withinss
     withinall <- append(withinall, temp)
     total_k <- append(total_k,i)
@@ -84,7 +84,7 @@ kmeansTunning <- function(data, maxK) {
   plot(x = total_k, y = withinall, type = "o", xlab = "Number of Cluster", ylab = "Total within")
 }
 
-# kmeansTunning(your_data)
+# kmeansTunning(your_data, maxK = 10)
 
 ```
 
@@ -106,20 +106,20 @@ K-means is a clustering algorithm based on distance. Cluster results are stated 
 
 ## 2.2 Building Cluster
 
-Once you are set in using the K of your choice from previous section, try to create a K-means cluster from our data and store it to `kmeans_model`. Use a `set.seed(100)` before building the model to guarantee a reproducible example. Create new variabel on coffee dataset named `cluster` and store the cluster number by extracting the `kmeans_model$clust`.
+Once you are set in using the K of your choice from previous section, try to create a K-means cluster from our data and store it to `coffee_cluster`. Use a `set.seed(654)` before building the model to guarantee a reproducible example. Create new variabel on coffee dataset named `cluster` and store the cluster number by extracting the `coffee_cluster$clust`.
 
 ## 2.3 Clusters Profiling
 
 7. For a customer who enjoy coffee with `coffeID` 929, which of the following coffee beans may be characteristically similar enough to warrant a recommendation?     
   - [ ] 1060    
   - [ ] 21    
-  - [ ] 1071    
+  - [ ] 1021    
   
 Recall how we can perform a cluster profiling by using a combination of `group_by()` and `summarise_all()` grouped by our previously created cluster column. After you extract the characteristics for each cluster, try to answer the following question:
   
 8. which coffee cluster has the highest mean of aroma, highest mean of sweetness, and lowest mean of acidity?
   - [ ] 5, 1, 2    
-  - [ ] 5, 6, 5    
-  - [ ] 2, 5, 1    
-  - [ ] 2, 4, 1    
+  - [ ] 3, 4, 1    
+  - [ ] 3, 1, 4         
+  - [ ] 4, 4, 1    
 
