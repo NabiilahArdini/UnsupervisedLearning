@@ -59,9 +59,9 @@ There are of course, other method of extracting the loading information using `d
 In the principal component analysis each PC produced has an eigen value obtained from the matrix covariance. The greater the eigen value produced, the greater the variance captured
 
 4. Which of the following is NOT TRUE about PCA?     
- - [ ] Because PCA tries to 'summarize' the covariance between variables of our data, it requires that the input variables to be scaled so they have the same range of measurement    
- - [ ] A Principal Component with an eigenvalue of 0.6 is not more helpful than a Principal Component with an eigenvalue of 6.0 in terms of the variance it explains    
-- [ ] We cannot fully reconstruct the original data from a PCA even if we use all the eigenvectors and eigenvalues because PCA always result in some loss of variance / information due to its dimensionality reduction process    
+ - [ ] PCA requires to be scaled so they have the same range of measurement    
+ - [ ] A Principal Component with an eigenvalue of 0.6 is not more helpful than a PC with an eigenvalue of 6.0   
+- [ ] We cannot fully reconstruct the original data from a PCA even we have eigen value and eigen vector   
   
 # 2. K-Means Clustering
 
