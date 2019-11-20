@@ -61,7 +61,7 @@ In the principal component analysis each PC produced has an eigen value obtained
 4. Which of the following is NOT TRUE about PCA?     
  - [ ] PCA requires to be scaled so they have the same range of measurement    
  - [ ] A Principal Component with an eigenvalue of 0.6 is not more helpful than a PC with an eigenvalue of 6.0   
-- [ ] We cannot fully reconstruct the original data from a PCA even we have eigen value and eigen vector   
+ - [ ] We cannot fully reconstruct the original data from a PCA even we have eigen value and eigen vector   
   
 # 2. K-Means Clustering
 
