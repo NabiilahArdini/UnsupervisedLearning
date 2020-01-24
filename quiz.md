@@ -62,7 +62,7 @@ In the principal component analysis each PC produced has an eigen value obtained
 4. Which of the following is NOT TRUE about PCA?
  - [ ] PCA requires to be scaled so they have the same range of measurement
  - [ ] A Principal Component with an eigenvalue of 0.6 is not more helpful than a PC with an eigenvalue of 6.0
- - [ ] We cannot fully reconstruct the original data from a PCA even we have eigen value and eigen vector
+ - [ ] We cannot fully reconstruct the original data from a PCA even when we have eigen value and eigen vector
 
 # 2. K-Means Clustering
 
@@ -103,7 +103,7 @@ K-means is a clustering algorithm based on distance. Cluster results are stated 
   - [ ] The centroid in the first iteration is placed randomly
   - [ ] A good cluster are clusters with low `withinss` and high `betweenss`
   - [ ] Cluster with low `withinss` means the character of the data within 1 cluster are similar to each other
-  - [ ] The greater the value of `betweenss`, the greater the data variance in each cluster
+  - [ ] The greater the value of `betweenss`, indicates the greater the data variance in each cluster
 
 ## 2.2 Building Cluster
 
