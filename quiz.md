@@ -1,5 +1,3 @@
-This quiz is part of Algoritma Academy assessment process. Congratulations on completing the Unsupervised Learning course! We will conduct an assessment quiz to test practical unsupervised learning techniques you have learned on the course. The quiz is expected to be taken in the classroom, please contact our team of instructors if you missed the chance to take it in class.
-
 # Data Exploration
 
 In this quiz, we will be using **Arabica Coffee Beans Reviews**. You can get the csv file stored within the folder under `coffee.csv` file. Before we perform data clustering and principle component analysis, we will need to perform exploratory data analysis. You can glimpse the structure of our dataset! You can choose either `str()` or `glimpse()` function.
@@ -101,7 +99,6 @@ Data clustering is a common data mining technique to create clusters of data tha
 ```
 # your code here
 
-
 ```
 
 ## 2.1 Choosing Optimum K
@@ -109,11 +106,12 @@ Data clustering is a common data mining technique to create clusters of data tha
 The next step in building a K-means clustering is to find the optimum cluster number to model our data. Use the defined `kmeansTunning()` function below to find the optimum K using Elbow method. Use a maximum of `maxK` as 5 to limit the plot into 5 distinct clusters.
 
 ```
+RNGkind(sample.kind = "Rounding")
 kmeansTunning <- function(data, maxK) {
   withinall <- NULL
   total_k <- NULL
   for (i in 2:maxK) {
-    set.seed(654)
+    set.seed(101)
     temp <- kmeans(data,i)$tot.withinss
     withinall <- append(withinall, temp)
     total_k <- append(total_k,i)
@@ -142,12 +140,12 @@ K-means is a clustering algorithm that groups the data based on distance. The re
 
 ## 2.2 Building Cluster
 
-Once you find the optimum K from the previous section, try to do K-means clustering from your data and store it as `coffee_cluster`. Use `set.seed(654)` to guarantee a reproducible example. Extract the cluster information from the resulting K-means object using `cofee_cluster$cluster` and add them as a new column named `cluster` to the coffee dataset.
+Once you find the optimum K from the previous section, try to do K-means clustering from your data and store it as `coffee_cluster`. Use `set.seed(101)` to guarantee a reproducible example. Extract the cluster information from the resulting K-means object using `cofee_cluster$cluster` and add them as a new column named `cluster` to the coffee dataset.
 
 ```
 # your code here
 
-set.seed(654)
+set.seed(101)
 ```
 
 ## 2.3 Clusters Profiling
