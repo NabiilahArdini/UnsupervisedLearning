@@ -1,5 +1,5 @@
 ---
-title: "quiz Unsupervised Learning"
+title: "Quiz Unsupervised Learning"
 author: "Team Algoritma"
 date: "3/2/2020"
 output: html_document
