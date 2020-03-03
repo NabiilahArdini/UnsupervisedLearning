@@ -64,7 +64,7 @@ Another great implementation of PCA is to visualize high dimensional data into 2
 
 ```
 
-2. Judging from the plot that you have created, which coffeee id is considered as outlier?
+2. Judging from the plot that you have created, which coffee id is considered as outlier?
  - [ ] 1082, 1080, 1081
  - [ ] 1082, 993, 998
  - [ ] 1081, 308, 201
@@ -170,7 +170,7 @@ Recall how we can perform a cluster profiling by using a combination of `group_b
 
 ```
 
-8. Can you describe the charateristic coffee that  in the same cluster as `coffeeId` 218!
+8. Can you describe the characteristic coffee that  in the same cluster as `coffeeId` 218!
   - [ ] Highest mean of Aroma, highest mean of Sweetness, and lowest mean of Acidity
   - [ ] Highest mean of Aroma, highest mean of Flavor, and lowest mean of Body
   - [ ] Highest mean of Aroma, highest mean of Flavor, and highest mean of Acidity
