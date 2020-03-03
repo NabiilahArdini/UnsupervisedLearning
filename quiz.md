@@ -50,12 +50,13 @@ We have prepared the scaled data to be used for PCA. Next, we will try to genera
 # your code here
 
 ```
-
+___
 1. Based on the summary, how many  Principal Components (PCs) you will use if you only tolerate no more than 20% of information loss?
  - [ ] 4 PC (PC 1 through 4)
  - [ ] 5 PC (PC 1 through 5)
  - [ ] 6 PC (PC 1 through 6)
  - [ ] 1 PC (PC 1 only)
+___
 
 Another great implementation of PCA is to visualize high dimensional data into 2 dimensional plot for various purposes, such as cluster analysis or detecting any outliers. In order to visualize the PCA, use `plot.PCA()` function to the `pca_coffee`. This will generate an individual PCA plot.
 
@@ -64,33 +65,39 @@ Another great implementation of PCA is to visualize high dimensional data into 2
 
 ```
 
+___
 2. Judging from the plot that you have created, which coffee id is considered as outlier?
  - [ ] 1082, 1080, 1081
  - [ ] 1082, 993, 998
  - [ ] 1081, 308, 201
  - [ ] 1080, 1082, 998
+___
 
 We can also create a variable PCA plot that shows the variable loading information of the PCA by simply add `choix = "var"` in the `plot.PCA()`. The loading information will be represented by the length of the arrow from the center of coordinates. The longer the arrow, the bigger loading information of those variable. However, this may not an efficient method if we have a lot of features. Some variables would overlap with each other, making it harder to see the variable names.
 
 An alternative way to extract the loading information is by using the `dimdesc()` function to the `pca_coffee`. Store the result as `pca_dimdesc`. Inspect the loading information from the first dimension/PC by calling `pca_dimdesc$Dim.1` since the first dimension is the one that hold the most information.
 
 ```
-
+# your code here
 ```
 
+___
 3. Mention 3 most contributing variables on PC 1 based on the correlation between variables with the PC 1.
  - [ ] Aroma, Flavor, Aftertaste
  - [ ] Sweetness, Clean.cup, Uniformity
  - [ ] Balance, Flavor, Aftertaste
  - [ ] Moisture, Quakers, Clean.Cup
  - [ ] Acidity, Body, Balance
+___
 
 In the principal component analysis, each produced PC has an eigen value obtained from the covariance matrix. The greater the eigen value, the greater the variance captured by the PC.
 
+___
 4. Which of the following is **NOT TRUE** about PCA?
  - [ ] PCA requires data to be scaled so they have the same range of measurement
  - [ ] A Principal Component with an eigenvalue of 0.6 is not more helpful than a PC with an eigenvalue of 6.0
  - [ ] We cannot fully reconstruct the original data from a PCA even when we have eigen value and eigen vector
+___
 
 # 2. K-Means Clustering
 
@@ -124,19 +131,23 @@ kmeansTunning <- function(data, maxK) {
 
 Based on the elbow plot generated from the function above try to answer the following question:
 
+___
 5. What is the optimal number of clusters ?
   - [ ] 2
   - [ ] 3
   - [ ] 4
   - [ ] 5
+___
 
 K-means is a clustering algorithm that groups the data based on distance. The resulting clusters are stated to be optimum if the distance between data in the same cluster is low and the distance between data from different clusters is high.
 
+___
 6. Which of the following is **NOT TRUE** about K-Means?
   - [ ] The centroid in the first iteration is placed randomly
   - [ ] A good cluster are clusters with low `withinss` and high `betweenss`
   - [ ] Cluster with low `withinss` means the character of the data within 1 cluster are similar to each other
   - [ ] The greater the value of `betweenss`, indicates the greater the data variance in each cluster
+___
 
 ## 2.2 Building Cluster
 
@@ -158,10 +169,12 @@ You can use the following chunk to answer question number 7.
 
 ```
 
+___
 7. For a customer who enjoy coffee with `coffeId` 929, which of the following coffee beans may be characteristically similar enough to warrant a recommendation?
   - [ ] 1060
   - [ ] 208
   - [ ] 1011
+___
 
 Recall how we can perform a cluster profiling by using a combination of `group_by()` and `summarise_all()`, grouped by the previously created cluster column. After you extract the characteristics for each cluster, try to answer the following question:
 
@@ -170,8 +183,10 @@ Recall how we can perform a cluster profiling by using a combination of `group_b
 
 ```
 
+___
 8. Can you describe the characteristic coffee that  in the same cluster as `coffeeId` 218!
   - [ ] Highest mean of Aroma, highest mean of Sweetness, and lowest mean of Acidity
   - [ ] Highest mean of Aroma, highest mean of Flavor, and lowest mean of Body
   - [ ] Highest mean of Aroma, highest mean of Flavor, and highest mean of Acidity
   - [ ] Highest mean of Aroma, lowest mean of Flavor, and lowest mean of Acidity
+___
