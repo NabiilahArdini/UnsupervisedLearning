@@ -1,3 +1,5 @@
+This quiz is part of Algoritma Academy assessment process. Congratulations on completing the Unsupervised Learning course! We will conduct an assessment quiz to test practical unsupervised learning techniques you have learned on the course. The quiz is expected to be taken in the classroom, please contact our team of instructors if you missed the chance to take it in class.
+
 # Data Exploration
 
 In this quiz, we will be using **Arabica Coffee Beans Reviews**. You can get the csv file stored within the folder under `coffee.csv` file. Before we perform data clustering and principle component analysis, we will need to perform exploratory data analysis. You can glimpse the structure of our dataset! You can choose either `str()` or `glimpse()` function.
