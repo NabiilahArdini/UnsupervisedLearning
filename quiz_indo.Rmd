@@ -11,11 +11,11 @@ library(dplyr)
 library(FactoMineR)
 ```
 
-Kuis ini merupakan bagian dari proses penilaian *Algoritma Academy*. Selamat anda sudah menyelesaikan materi *Unsupervised Learning*! Kami akan melakukan penilaian berupa kuis untuk menguji materi yang sudah dipelajari. Pengerjaan Kuis diharapkan dapat dilakukan di dalam kelas, silakan hubungi tim instruktur kami jika Anda melewatkan kesempatan untuk mengambilnya di kelas.
+Kuis ini merupakan bagian dari proses penilaian *Algoritma Academy*. Selamat snda sudah menyelesaikan materi *Unsupervised Learning*! Kami akan melakukan penilaian berupa kuis untuk menguji materi yang sudah dipelajari. Pengerjaan Kuis diharapkan dapat dilakukan di dalam kelas, silakan hubungi tim instruktur kami jika Anda melewatkan kesempatan untuk mengambilnya di kelas.
 
 # Data Exploration
 
-Pada kuis ini, kita akan menggunakan data **Arabica Coffee Beans Reviews**. Anda bisa mendapatkan file csv yang tersimpan dalam folder ini dengan nama `coffee.csv`. Sebelum kita melakukan analisis clustering dan *principle component analysis*, kita perlu melakukan eksplorasi data. anda dapat melihat sekilas struktur dari dataset yang digunakan! Anda dapat menggunakan fungsi `str()` atau `glimpse()`. 
+Pada kuis ini, kita akan menggunakan data **Arabica Coffee Beans Reviews**. Anda bisa mendapatkan file csv yang tersimpan dalam folder ini dengan nama `coffee.csv`. Sebelum kita melakukan analisis clustering dan *principle component analysis*, kita perlu melakukan eksplorasi data. snda dapat melihat sekilas struktur dari dataset yang digunakan! Anda dapat menggunakan fungsi `str()` atau `glimpse()`. 
 
 ```{r}
 # your code here
@@ -24,21 +24,21 @@ Pada kuis ini, kita akan menggunakan data **Arabica Coffee Beans Reviews**. Anda
 
 Dataset ini terdiri dari 13 variabel dengan 1082 baris yang berisi ulasan (reviews) varietas kopi Arabika oleh individu yang sangat terlatih dari *Coffee Quality Institute*. Perhatikan glosarium berikut:
 
-- `coffeId` : id sebuah coffee
-- `Aroma` : aroma sebuah kopi setelah ditambahkan air panas (misalnya: floral, spicy, fruity, winery, sweety, earthy atau nutty dll.).
-- `Flavor` : karakteristik rasa (misalnya: fruity, sour, bitter, rich atau balanced dll.).
+- `coffeId` : ID sebuah coffee
+- `Aroma` : Aroma sebuah kopi setelah ditambahkan air panas (misalnya: floral, spicy, fruity, winery, sweety, earthy atau nutty, dll.).
+- `Flavor` : Karakteristik rasa (misalnya: fruity, sour, bitter, rich, atau balanced, dll.).
 - `Aftertaste` : Kesan secara keseluruhan sisa kopi didalam mulut.
-- `Acidity` : Tingkat ketajaman dan keaktifan keasaman (misalnya: sharp, thin, flat, mild, or neutral etc.).
-- `Body` : Tekstur kopi ketika berada didalam mulut (misalnya: full, thick, balanced, buttery or thin etc.).
+- `Acidity` : Tingkat ketajaman dan keaktifan keasaman (misalnya: sharp, thin, flat, mild, atau neutral dll.).
+- `Body` : Tekstur kopi ketika berada di dalam mulut (misalnya: full, thick, balanced, buttery, atau thin, dll.).
 - `Balance` : Tidak ada rasa yang mendominasi yang lainnya.
 - `Uniformity` : Seberapa mirip ukuran partikel bubuk kopi.
-- `Clean cup` : tidak ada cacat rasa.
-- `Sweetness` : ringan, sensasi rasa halus tanpa rasa yang keras.
-- `Cupper points` : poin yang diperoleh dari Cupper (orang yang secara objektif meninjau rasa dan aroma kopi yang diseduh, untuk mengetahui apakah itu Kopi Kelas Khusus).
+- `Clean cup` : Tidak ada cacat rasa.
+- `Sweetness` : Ringan, sensasi rasa halus tanpa rasa yang keras.
+- `Cupper points` : Poin yang diperoleh dari *Cupper* (orang yang secara objektif meninjau rasa dan aroma kopi yang diseduh, untuk mengetahui apakah kopi termasuk *Specialty Grade Coffee*).
 - `Moisture` : Tingkat kelembapan pada biji kopi
-- `Quakers`: biji kopi yang belum matang, seringkali dengan permukaan yang berkerut, tidak menjadi gelap saat dipanggang.
+- `Quakers`: Biji kopi yang belum matang, seringkali dengan permukaan yang berkerut, tidak menjadi gelap saat dipanggang.
 
-Jika anda melihat secara hati-hati, `coffeeId` tidak memberikan informasi yang berarti karena dia hanya merepresentasikan indeks baris dari suatu observasi dan setiap kopi memiliki id masing-masing. Oleh karena itu, akan lebih baik bila menghapus kolom tersebut sebelum melanjukan ketahap selanjutnya.
+Jika anda melihat secara hati-hati, `coffeeId` tidak memberikan informasi yang berarti karena dia hanya merepresentasikan indeks baris dari suatu observasi dan setiap kopi memiliki ID masing-masing. Oleh karena itu, akan lebih baik bila kita menghapus kolom tersebut sebelum masuk ke tahap selanjutnya.
 
 ```{r}
 # your code here
@@ -56,37 +56,37 @@ PCA sangat berguna untuk menyimpan informasi sekaligus mereduksi dimensi data. N
 
 ```
 
-## Build your Principal Component
+## Membuat Principal Component
 
-Kita telah menyiapkan data yang sudah diskalakan untuk digunakan pada PCA. Selanjutnya, kita akan mencoba membuat *principal component* dari `coffee_scale`. Ingat kembali bagaimana kita menggunakan *library* `FactoMineR` untuk melakukan PCA. Gunakan fungsi `PCA()` dari library tersebut untuk menghasilkan PCA dan menyimpannya sebagai `pca_coffee`. Ingatlah untuk mengatur parameter `scale.unit` ke` FALSE` karena kita sudah menskalakan data secara manual. Periksa ringkasan dari `pca_coffee`.
+Kita telah menyiapkan data yang sudah diskalakan untuk digunakan pada PCA. Selanjutnya, kita akan membuat *principal component* dari `coffee_scale`. Ingat kembali bagaimana kita menggunakan *library* `FactoMineR` untuk melakukan PCA. Gunakan fungsi `PCA()` dari library tersebut untuk menghasilkan PCA dan menyimpannya sebagai `pca_coffee`. Ingatlah untuk mengatur parameter `scale.unit` ke` FALSE` karena kita sudah menskalakan data secara manual. Periksa ringkasan dari `pca_coffee`.
 
 ```{r}
 # your code here
 
 ```
 
-Berdasarkan hasil ringkasan (*summary*), berapa banyak *Principal Components* (PCs) yang akan anda gunakan bila anda hanya mentoleransi informasi yang hilang tidak lebih dari 20%.
- - [ ] 4 PC (PC 1 through 4)
- - [ ] 5 PC (PC 1 through 5)
- - [ ] 6 PC (PC 1 through 6)
+1. Berdasarkan hasil ringkasan (*summary*), berapa banyak *Principal Components* (PCs) yang akan Anda gunakan bila Anda hanya mentoleransi informasi yang hilang tidak lebih dari 20%.
+ - [ ] 4 PC (PC 1 hingga 4)
+ - [ ] 5 PC (PC 1 hingga 5)
+ - [ ] 6 PC (PC 1 hingga 6)
  - [ ] 1 PC (PC 1 only)
 
-Implementasi PCA hebat lainnya adalah memvisualisasikan data berdimensi tinggi menjadi plot 2 dimensi untuk berbagai tujuan, seperti analisis cluster atau mendeteksi pencilan. Untuk memvisualisasikan PCA, gunakan fungsi `plot.PCA()` ke `pca_coffee`. Ini akan menghasilkan plot PCA individu.
+Implementasi PCA hebat lainnya adalah memvisualisasikan data berdimensi tinggi menjadi plot 2 dimensi untuk berbagai tujuan, seperti analisis cluster atau mendeteksi pencilan (*outlier*). Untuk memvisualisasikan PCA, gunakan fungsi `plot.PCA()` ke `pca_coffee`. Ini akan menghasilkan plot individu/observasi dari objek PCA.
 
 ```{r}
 # your code here
 
 ```
 
-2. Dilihat dari plot yang sudah Anda buat, kopi dengan id berapa yang dianggap outlier?
+2. Dilihat dari plot yang sudah Anda buat, kopi dengan ID berapa yang dianggap outlier?
  - [ ] 1082, 1080, 1081
  - [ ] 1082, 993, 998
  - [ ] 1081, 308, 201
  - [ ] 1080, 1082, 998
 
-Kita juga dapat membuat plot dari variabel PCA yang menunjukkan *loading information* variabel dari PCA hanya dengan menambahkan `choix ="var "` di `plot.PCA ()`. *loading information* akan diwakili oleh panjang panah dari pusat koordinat. Semakin panjang panahnya, semakin besar *loading information* dari variabel tersebut. Namun, ini mungkin bukan metode yang efisien jika kita memiliki banyak fitur. Beberapa variabel akan tumpang tindih satu sama lain, sehingga lebih sulit untuk melihat nama variabel.
+Kita juga dapat membuat plot dari variabel PCA yang menunjukkan *loading information* dari tiap variabel pada PCA hanya dengan menambahkan `choix ="var "` di `plot.PCA ()`. *Loading information* akan diwakili oleh panjang panah dari pusat koordinat. Semakin panjang panahnya, semakin besar *loading information* dari variabel tersebut. Namun, ini mungkin bukan metode yang efisien jika kita memiliki banyak variabel. Beberapa variabel akan tumpang tindih satu sama lain, sehingga lebih sulit untuk melihat nama variabel.
 
-Cara alternatif untuk mengekstrak *loading information* adalah dengan menggunakan fungsi `dimdesc()` ke `pca_coffee`. Simpan hasilnya sebagai `pca_dimdesc`. Periksa *loading information* dari dimensi/PC pertama  dengan memanggil `pca_dimdesc$Dim.1` karena dimensi pertama adalah yang menyimpan informasi paling banyak.
+Cara alternatif untuk mengekstrak *loading information* adalah dengan menggunakan fungsi `dimdesc()` ke `pca_coffee`. Simpan hasilnya sebagai `pca_dimdesc`. Periksa *loading information* dari dimensi/PC pertama dengan memanggil `pca_dimdesc$Dim.1` karena dimensi pertama adalah yang paling banyak menyimpan informasi.
 
 ```{r}
 # your code here
@@ -100,25 +100,32 @@ Cara alternatif untuk mengekstrak *loading information* adalah dengan menggunaka
  - [ ] Moisture, Quakers, Clean.Cup
  - [ ] Acidity, Body, Balance
 
-Dalam *principal component analysis*, setiap PC yang dihasilkan memiliki nilai eigen yang diperoleh dari matriks kovarians. Semakin besar nilai eigen, semakin besar varian yang ditangkap oleh PC.
+Dalam *principal component analysis*, setiap PC yang dihasilkan memiliki nilai eigen yang diperoleh dari matriks kovarians. Semakin besar nilai eigen, semakin besar variansi yang ditangkap oleh PC.
 
 4. Manakah dari pernyataan berikut ini yang **TIDAK BENAR** tentang PCA?
+ - [ ] PCA membutuhkan data yang sudah diskalakan agar tiap variabel memiliki rentang nilai yang sama
+ - [ ] Sebuah *Principal Component* (PC) dengan eigenvalue 0.6 tidak lebih membantu dibandingkan PC dengan eigenvalue 6.0
+ - [ ] Kita tidak dapat merekonstruksi data awal kita secara sempurna dari hasil PCA meskipun kita memiliki eigen value dan eigen vector
+
+*Referensi Opsi Bahasa Inggris:*
  - [ ] PCA requires data to be scaled so they have the same range of measurement
  - [ ] A Principal Component with an eigenvalue of 0.6 is not more helpful than a PC with an eigenvalue of 6.0
  - [ ] We cannot fully reconstruct the original data from a PCA even when we have eigen value and eigen vector
 
 # 2. K-Means Clustering
 
-Pengelompokan data (*Data Clustering*) adalah teknik data mining yang umum untuk membuat kelompok data yang dapat diidentifikasi sebagai "data dengan karakteristik yang sama". Sebelum melakukan pengelompokan data, Anda perlu menghapus *outlier* yang teridentifikasi berdasarkan plot PCA individu sebelumnya. Observasi dengan **coffeeId 1082** adalah pencilan yang cukup meluas dibandingkan dengan pengamatan lainnya. Hapus observasi tersebut dari dataset awal kita dan sekali lagi lakukan penskalakan (*scaling*) data.
+Pengelompokan data (*Data Clustering*) adalah teknik data mining yang umum untuk membuat kelompok data yang dapat diidentifikasi sebagai "data dengan karakteristik yang sama". Sebelum melakukan pengelompokan data, Anda perlu menghapus *outlier* yang teridentifikasi berdasarkan plot PCA individu sebelumnya. Observasi dengan **coffee ID (baris) 1082** adalah pencilan yang cukup jauh dibandingkan dengan pengamatan lainnya. Hapus observasi tersebut dari dataset awal dan sekali lagi lakukan (*scaling*) pada data.
+
+*Note: Anda mungkin ingin menyimpan data yang sudah diskalakan ke objek baru karena kita masih memerlukan data asli untuk analisis profil cluster nanti.* 
 
 ```{r}
 # your code here
 
 ```
 
-## 2.1 Choosing Optimum K
+## 2.1 Memilih Optimum K
 
-Langkah selanjutnya dalam membangun cluster dengan K-means adalah menemukan jumlah cluster optimal untuk memodelkan data kita. Gunakan fungsi `kmeansTunning()` yang disediakan di bawah ini untuk menemukan K yang optimal menggunakan metode Elbow. Gunakan maksimum `maxK` sebesar 5 untuk membatasi plot menjadi 5 cluster berbeda.
+Langkah selanjutnya dalam membangun cluster dengan K-means adalah menemukan jumlah cluster optimal untuk memodelkan data kita. Gunakan fungsi `kmeansTunning()` yang disediakan di bawah ini untuk menemukan K yang optimal menggunakan metode Elbow. Gunakan `k` maksimum `maxK` sebesar 5 untuk membatasi plot menjadi 5 cluster berbeda.
 
 ```{r message=F, warning=F}
 RNGkind(sample.kind = "Rounding")
@@ -149,6 +156,12 @@ Berdasarkan *elbow plot* yang dihasilkan dari fungsi di atas coba jawab pertanya
 K-means merupakan algoritma clustering yang mengelompokkan data berdasarkan jarak. Cluster yang dihasilkan dikatakan optimal jika jarak antar data pada cluster yang sama rendah dan jarak antar data dari cluster yang berbeda tinggi.
 
 6. Manakah dari pernyataan berikut ini yang **TIDAK BENAR** tentang K-Means?
+  - [ ] Centroid (titik pusat cluster) pada iterasi pertama dipilih secara acak
+  - [ ] Cluster yang baik memiliki nilai `withinss` yang rendah dan `betweenss` yang tinggi
+  - [ ] Cluster dengan nilai `withinss` yang rendah berarti memiliki data dengan karakteristik yang mirip di dalam 1 cluster
+  - [ ] Semakin tinggi nilai `betweenss` mengindikasikan variansi data yang tinggi di dalam setiap cluster
+
+*Referensi Opsi Bahasa Inggris:*
   - [ ] The centroid in the first iteration is placed randomly
   - [ ] A good cluster are clusters with low `withinss` and high `betweenss`
   - [ ] Cluster with low `withinss` means the character of the data within 1 cluster are similar to each other
@@ -156,13 +169,13 @@ K-means merupakan algoritma clustering yang mengelompokkan data berdasarkan jara
 
 ## 2.2 Building Cluster
 
-Setelah Anda menemukan K optimal pada bagian sebelumnya, coba lakukan K-means *clustering*  dari data Anda dan simpan sebagai `coffee_cluster`. Gunakan `set.seed (101)` untuk menjamin contoh yang dapat direproduksi. Ekstrak informasi cluster dari objek K-means yang dihasilkan menggunakan `cofee_cluster$cluster` dan tambahkan sebagai kolom baru bernama` cluster` ke dataset kopi.
+Setelah Anda menemukan K optimal pada bagian sebelumnya, coba lakukan K-means *clustering*  dari data Anda dan simpan sebagai `coffee_cluster`. Gunakan `set.seed (101)` untuk menjamin contoh yang dapat direproduksi. Ekstrak informasi cluster dari objek K-means yang dihasilkan menggunakan `cofee_cluster$cluster` dan tambahkan sebagai kolom baru bernama` cluster` ke dataset kopi Anda.
 
 
 ```{r}
-# your code here
+RNGkind(sample.kind = "Rounding")
 set.seed(101)
-
+# your code here
 
 ```
 
@@ -175,7 +188,7 @@ Anda dapat menggunakan *chunk* berikut untuk menjawab pertanyaan nomor 7.
 
 ```
 
-7. Untuk pelanggan yang menikmati kopi dengan `coffeId` 929, manakah dari biji kopi berikut yang mungkin cukup mirip untuk direkomendasi?
+7. Untuk pelanggan yang menikmati kopi dengan coffee ID 929, manakah dari biji kopi berikut yang mungkin cukup mirip untuk direkomendasi?
   - [ ] 1060
   - [ ] 208
   - [ ] 1011
@@ -187,7 +200,7 @@ Ingat bahwa kita dapat melakukan profilisasi cluster dengan menggunakan kombinas
 
 ```
 
-8. Bisakah Anda mendeskripsikan karakteristik kopi yang ada di cluster yang sama dengan `coffeeId` 218!
+8. Bisakah Anda mendeskripsikan karakteristik kopi yang ada di cluster yang sama dengan coffee ID 218!
   - [ ] Highest mean of Aroma, highest mean of Sweetness, and lowest mean of Acidity
   - [ ] Highest mean of Aroma, highest mean of Flavor, and lowest mean of Body
   - [ ] Highest mean of Aroma, highest mean of Flavor, and highest mean of Acidity

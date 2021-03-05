@@ -1,4 +1,4 @@
-This quiz is part of Algoritma Academy assessment process. Congratulations on completing the Unsupervised Learning course! We will conduct an assessment quiz to test practical unsupervised learning techniques you have learned on the course. The quiz is expected to be taken in the classroom, please contact our team of instructors if you missed the chance to take it in class.
+This quiz is part of Algoritma Academy assessment process. Congratulations on completing the Unsupervised Learning course! We will conduct an assessment quiz to test the practical unsupervised learning techniques that you have learned on the course. The quiz is expected to be taken in the classroom, please contact our team of instructors if you missed the chance to take it in class.
 
 # Data Exploration
 
@@ -9,7 +9,7 @@ In this quiz, we will be using **Arabica Coffee Beans Reviews**. You can get the
 
 ```
 
-This dataset consisted of 13 variables with 1082 rows and contain reviews of varieties of Arabica coffee by highly trained individuals from the Coffee Quality Institute. Take a look at the following glossary:
+This dataset consist of 13 variables with 1082 rows and contains reviews of varieties of Arabica coffee by highly trained individuals from the Coffee Quality Institute. Take a look at the following glossary:
 
 - `coffeId` : id of coffee
 - `Aroma` : the smell of coffee after adding hot water (e.g.floral, spicy, fruity, winery, sweety, earthy or nutty etc.).
@@ -21,7 +21,7 @@ This dataset consisted of 13 variables with 1082 rows and contain reviews of var
 - `Uniformity` : how similarly sized the ground coffee particles are.
 - `Clean cup` : no flavor defects present.
 - `Sweetness` : mild, smooth taste sensation with no harsh flavors.
-- `Cupper points` : points earned from a Cupper (a person who objectively review over the taste and aroma of a brewed coffee, to know whether it’s a Specialty Grade Coffee).
+- `Cupper points` : points earned from a Cupper (a person who objectively review over the taste and aroma of a brewed coffee, to know whether it's a Specialty Grade Coffee).
 - `Moisture` : any amount of liquid diffused in small quantities within a green coffee beans, if humidity is stable, the coffee beans will retain that moisture until roasting.
 - `Quakers`: unripened coffee beans, often with a wrinkled surface, not darken well when roasted.
 
@@ -60,7 +60,7 @@ ___
  - [ ] 1 PC (PC 1 only)
 ___
 
-Another great implementation of PCA is to visualize high dimensional data into 2 dimensional plot for various purposes, such as cluster analysis or detecting any outliers. In order to visualize the PCA, use `plot.PCA()` function to the `pca_coffee`. This will generate an individual PCA plot.
+Another great implementation of PCA is to visualize high dimensional data into 2 dimensional plot for various purposes, such as cluster analysis or detecting outliers. In order to visualize the PCA, use `plot.PCA()` function to the `pca_coffee`. This will generate an individual PCA plot.
 
 ```
 # your code here
@@ -103,7 +103,9 @@ ___
 
 # 2. K-Means Clustering
 
-Data clustering is a common data mining technique to create clusters of data that can be identified as "data with the same characteristics". Before performing data clustering, you will need to remove the identified *outlier* based the previous individual PCA plot. The observation with **coffeeId 1082** is a fairly extending outlier compared to the rest of the observation. Remove the observation from our initial dataset and once again scale the data.
+Data clustering is a common data mining technique to create clusters of data that can be identified as "data with the same characteristics". Before performing data clustering, you will need to remove the identified *outliers* based on the previous individual PCA plot. The observation with **coffee ID (row) 1082** is a fairly extending outlier compared to the rest of the observation. Remove this observation from our initial dataset and once again scale the data. 
+
+*Note: You may want to store the scaled data in a new object for we will still need the original data for the cluster profiling analysis.*
 
 ```
 # your code here
@@ -156,9 +158,10 @@ ___
 Once you find the optimum K from the previous section, try to do K-means clustering from your data and store it as `coffee_cluster`. Use `set.seed(101)` to guarantee a reproducible example. Extract the cluster information from the resulting K-means object using `cofee_cluster$cluster` and add them as a new column named `cluster` to the coffee dataset.
 
 ```
+RNGkind(sample.kind = "Rounding")
+set.seed(101)
 # your code here
 
-set.seed(101)
 ```
 
 ## 2.3 Clusters Profiling
@@ -172,7 +175,7 @@ You can use the following chunk to answer question number 7.
 ```
 
 ___
-7. For a customer who enjoy coffee with `coffeId` 929, which of the following coffee beans may be characteristically similar enough to warrant a recommendation?
+7. For a customer who enjoy coffee with coffee ID 929, which of the following coffee beans may be characteristically similar enough to warrant a recommendation?
   - [ ] 1060
   - [ ] 208
   - [ ] 1011
@@ -186,7 +189,7 @@ Recall how we can perform a cluster profiling by using a combination of `group_b
 ```
 
 ___
-8. Can you describe the characteristic coffee that  in the same cluster as `coffeeId` 218!
+8. Can you describe the characteristic coffee that  in the same cluster as coffee ID 218!
   - [ ] Highest mean of Aroma, highest mean of Sweetness, and lowest mean of Acidity
   - [ ] Highest mean of Aroma, highest mean of Flavor, and lowest mean of Body
   - [ ] Highest mean of Aroma, highest mean of Flavor, and highest mean of Acidity
