@@ -11,11 +11,11 @@ library(dplyr)
 library(FactoMineR)
 ```
 
-Kuis ini merupakan bagian dari proses penilaian *Algoritma Academy*. Selamat snda sudah menyelesaikan materi *Unsupervised Learning*! Kami akan melakukan penilaian berupa kuis untuk menguji materi yang sudah dipelajari. Pengerjaan Kuis diharapkan dapat dilakukan di dalam kelas, silakan hubungi tim instruktur kami jika Anda melewatkan kesempatan untuk mengambilnya di kelas.
+Kuis ini merupakan bagian dari proses penilaian *Algoritma Academy*. Selamat Anda sudah menyelesaikan materi *Unsupervised Learning*! Kami akan melakukan penilaian berupa kuis untuk menguji materi yang sudah dipelajari. Pengerjaan Kuis diharapkan dapat dilakukan di dalam kelas, silakan hubungi tim instruktur kami jika Anda melewatkan kesempatan untuk mengambilnya di kelas.
 
 # Data Exploration
 
-Pada kuis ini, kita akan menggunakan data **Arabica Coffee Beans Reviews**. Anda bisa mendapatkan file csv yang tersimpan dalam folder ini dengan nama `coffee.csv`. Sebelum kita melakukan analisis clustering dan *principle component analysis*, kita perlu melakukan eksplorasi data. snda dapat melihat sekilas struktur dari dataset yang digunakan! Anda dapat menggunakan fungsi `str()` atau `glimpse()`. 
+Pada kuis ini, kita akan menggunakan data **Arabica Coffee Beans Reviews**. Anda bisa mendapatkan file csv yang tersimpan dalam folder ini dengan nama `coffee.csv`. Sebelum kita melakukan analisis clustering dan *principle component analysis*, kita perlu melakukan eksplorasi data. Anda dapat melihat sekilas struktur dari dataset yang digunakan! Anda dapat menggunakan fungsi `str()` atau `glimpse()`. 
 
 ```{r}
 # your code here
